@@ -19,6 +19,8 @@
 		03046F0518BA41DF002F9183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03046EED18BA41DF002F9183 /* UIKit.framework */; };
 		03046F0D18BA41DF002F9183 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03046F0B18BA41DF002F9183 /* InfoPlist.strings */; };
 		03046F0F18BA41DF002F9183 /* DreamParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03046F0E18BA41DF002F9183 /* DreamParseTests.m */; };
+		03046F1A18BA435C002F9183 /* DP.db in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1918BA435C002F9183 /* DP.db */; };
+		03046F1C18BA43A9002F9183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1B18BA43A9002F9183 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		03046F0A18BA41DF002F9183 /* DreamParseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DreamParseTests-Info.plist"; sourceTree = "<group>"; };
 		03046F0C18BA41DF002F9183 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03046F0E18BA41DF002F9183 /* DreamParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamParseTests.m; sourceTree = "<group>"; };
+		03046F1918BA435C002F9183 /* DP.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = DP.db; sourceTree = "<group>"; };
+		03046F1B18BA43A9002F9183 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +111,12 @@
 		03046EEF18BA41DF002F9183 /* DreamParse */ = {
 			isa = PBXGroup;
 			children = (
+				03046F1818BA435C002F9183 /* resource */,
 				03046EF818BA41DF002F9183 /* DPAppDelegate.h */,
 				03046EF918BA41DF002F9183 /* DPAppDelegate.m */,
 				03046EFB18BA41DF002F9183 /* Images.xcassets */,
 				03046EF018BA41DF002F9183 /* Supporting Files */,
+				03046F1B18BA43A9002F9183 /* Main.storyboard */,
 			);
 			path = DreamParse;
 			sourceTree = "<group>";
@@ -142,6 +148,14 @@
 				03046F0B18BA41DF002F9183 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03046F1818BA435C002F9183 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				03046F1918BA435C002F9183 /* DP.db */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03046F1A18BA435C002F9183 /* DP.db in Resources */,
 				03046EF418BA41DF002F9183 /* InfoPlist.strings in Resources */,
 				03046EFC18BA41DF002F9183 /* Images.xcassets in Resources */,
+				03046F1C18BA43A9002F9183 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
