@@ -21,6 +21,20 @@
 		03046F0F18BA41DF002F9183 /* DreamParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03046F0E18BA41DF002F9183 /* DreamParseTests.m */; };
 		03046F1A18BA435C002F9183 /* DP.db in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1918BA435C002F9183 /* DP.db */; };
 		03046F1C18BA43A9002F9183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1B18BA43A9002F9183 /* Main.storyboard */; };
+		035E961F18BB8D85009AF193 /* DPDreamMainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E961E18BB8D85009AF193 /* DPDreamMainListViewController.m */; };
+		035E962218BB8DFC009AF193 /* DPDreamSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962118BB8DFC009AF193 /* DPDreamSearchListViewController.m */; };
+		035E962518BB8E1A009AF193 /* DPDreamDtailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962418BB8E1A009AF193 /* DPDreamDtailViewController.m */; };
+		035E962918BB8ED9009AF193 /* DPDBLoigc.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962818BB8ED9009AF193 /* DPDBLoigc.m */; };
+		035E962D18BB8F1A009AF193 /* DPDreamEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962C18BB8F1A009AF193 /* DPDreamEntity.m */; };
+		035E963118BB9301009AF193 /* DPDreamService.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963018BB9301009AF193 /* DPDreamService.m */; };
+		035E964118BB9AB9009AF193 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 035E963418BB9AB9009AF193 /* .gitignore */; };
+		035E964218BB9AB9009AF193 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 035E963518BB9AB9009AF193 /* .travis.yml */; };
+		035E964318BB9AB9009AF193 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963718BB9AB9009AF193 /* FMDatabase.m */; };
+		035E964418BB9AB9009AF193 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963918BB9AB9009AF193 /* FMDatabaseAdditions.m */; };
+		035E964518BB9AB9009AF193 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963B18BB9AB9009AF193 /* FMDatabasePool.m */; };
+		035E964618BB9AB9009AF193 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */; };
+		035E964718BB9AB9009AF193 /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963E18BB9AB9009AF193 /* fmdb.m */; };
+		035E964818BB9AB9009AF193 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E964018BB9AB9009AF193 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +66,31 @@
 		03046F0E18BA41DF002F9183 /* DreamParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamParseTests.m; sourceTree = "<group>"; };
 		03046F1918BA435C002F9183 /* DP.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = DP.db; sourceTree = "<group>"; };
 		03046F1B18BA43A9002F9183 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		035E961D18BB8D85009AF193 /* DPDreamMainListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamMainListViewController.h; sourceTree = "<group>"; };
+		035E961E18BB8D85009AF193 /* DPDreamMainListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamMainListViewController.m; sourceTree = "<group>"; };
+		035E962018BB8DFC009AF193 /* DPDreamSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamSearchListViewController.h; sourceTree = "<group>"; };
+		035E962118BB8DFC009AF193 /* DPDreamSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamSearchListViewController.m; sourceTree = "<group>"; };
+		035E962318BB8E1A009AF193 /* DPDreamDtailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamDtailViewController.h; sourceTree = "<group>"; };
+		035E962418BB8E1A009AF193 /* DPDreamDtailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamDtailViewController.m; sourceTree = "<group>"; };
+		035E962718BB8ED9009AF193 /* DPDBLoigc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDBLoigc.h; sourceTree = "<group>"; };
+		035E962818BB8ED9009AF193 /* DPDBLoigc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDBLoigc.m; sourceTree = "<group>"; };
+		035E962B18BB8F1A009AF193 /* DPDreamEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamEntity.h; sourceTree = "<group>"; };
+		035E962C18BB8F1A009AF193 /* DPDreamEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamEntity.m; sourceTree = "<group>"; };
+		035E962F18BB9301009AF193 /* DPDreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamService.h; sourceTree = "<group>"; };
+		035E963018BB9301009AF193 /* DPDreamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamService.m; sourceTree = "<group>"; };
+		035E963418BB9AB9009AF193 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		035E963518BB9AB9009AF193 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		035E963618BB9AB9009AF193 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		035E963718BB9AB9009AF193 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		035E963818BB9AB9009AF193 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		035E963918BB9AB9009AF193 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		035E963A18BB9AB9009AF193 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		035E963B18BB9AB9009AF193 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		035E963C18BB9AB9009AF193 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		035E963E18BB9AB9009AF193 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
+		035E963F18BB9AB9009AF193 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		035E964018BB9AB9009AF193 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +150,12 @@
 		03046EEF18BA41DF002F9183 /* DreamParse */ = {
 			isa = PBXGroup;
 			children = (
-				03046F1818BA435C002F9183 /* resource */,
+				035E963218BB9AB9009AF193 /* Lib */,
+				035E962E18BB92EE009AF193 /* Service */,
+				035E962A18BB8F09009AF193 /* Entity */,
+				035E962618BB8EC4009AF193 /* Logic */,
+				035E961C18BB8D3E009AF193 /* Controller */,
+				03046F1818BA435C002F9183 /* Resource */,
 				03046EF818BA41DF002F9183 /* DPAppDelegate.h */,
 				03046EF918BA41DF002F9183 /* DPAppDelegate.m */,
 				03046EFB18BA41DF002F9183 /* Images.xcassets */,
@@ -150,12 +194,85 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		03046F1818BA435C002F9183 /* resource */ = {
+		03046F1818BA435C002F9183 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				03046F1918BA435C002F9183 /* DP.db */,
 			);
+			name = Resource;
 			path = resource;
+			sourceTree = "<group>";
+		};
+		035E961C18BB8D3E009AF193 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				035E961D18BB8D85009AF193 /* DPDreamMainListViewController.h */,
+				035E961E18BB8D85009AF193 /* DPDreamMainListViewController.m */,
+				035E962018BB8DFC009AF193 /* DPDreamSearchListViewController.h */,
+				035E962118BB8DFC009AF193 /* DPDreamSearchListViewController.m */,
+				035E962318BB8E1A009AF193 /* DPDreamDtailViewController.h */,
+				035E962418BB8E1A009AF193 /* DPDreamDtailViewController.m */,
+			);
+			name = Controller;
+			path = controller;
+			sourceTree = "<group>";
+		};
+		035E962618BB8EC4009AF193 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				035E962718BB8ED9009AF193 /* DPDBLoigc.h */,
+				035E962818BB8ED9009AF193 /* DPDBLoigc.m */,
+			);
+			name = Logic;
+			path = logic;
+			sourceTree = "<group>";
+		};
+		035E962A18BB8F09009AF193 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				035E962B18BB8F1A009AF193 /* DPDreamEntity.h */,
+				035E962C18BB8F1A009AF193 /* DPDreamEntity.m */,
+			);
+			name = Entity;
+			path = entity;
+			sourceTree = "<group>";
+		};
+		035E962E18BB92EE009AF193 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				035E962F18BB9301009AF193 /* DPDreamService.h */,
+				035E963018BB9301009AF193 /* DPDreamService.m */,
+			);
+			name = Service;
+			path = service;
+			sourceTree = "<group>";
+		};
+		035E963218BB9AB9009AF193 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				035E963318BB9AB9009AF193 /* fmdb */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		035E963318BB9AB9009AF193 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				035E963418BB9AB9009AF193 /* .gitignore */,
+				035E963518BB9AB9009AF193 /* .travis.yml */,
+				035E963618BB9AB9009AF193 /* FMDatabase.h */,
+				035E963718BB9AB9009AF193 /* FMDatabase.m */,
+				035E963818BB9AB9009AF193 /* FMDatabaseAdditions.h */,
+				035E963918BB9AB9009AF193 /* FMDatabaseAdditions.m */,
+				035E963A18BB9AB9009AF193 /* FMDatabasePool.h */,
+				035E963B18BB9AB9009AF193 /* FMDatabasePool.m */,
+				035E963C18BB9AB9009AF193 /* FMDatabaseQueue.h */,
+				035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */,
+				035E963E18BB9AB9009AF193 /* fmdb.m */,
+				035E963F18BB9AB9009AF193 /* FMResultSet.h */,
+				035E964018BB9AB9009AF193 /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +351,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035E964218BB9AB9009AF193 /* .travis.yml in Resources */,
+				035E964118BB9AB9009AF193 /* .gitignore in Resources */,
 				03046F1A18BA435C002F9183 /* DP.db in Resources */,
 				03046EF418BA41DF002F9183 /* InfoPlist.strings in Resources */,
 				03046EFC18BA41DF002F9183 /* Images.xcassets in Resources */,
@@ -256,8 +375,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035E964718BB9AB9009AF193 /* fmdb.m in Sources */,
+				035E962918BB8ED9009AF193 /* DPDBLoigc.m in Sources */,
+				035E964818BB9AB9009AF193 /* FMResultSet.m in Sources */,
+				035E963118BB9301009AF193 /* DPDreamService.m in Sources */,
+				035E962D18BB8F1A009AF193 /* DPDreamEntity.m in Sources */,
+				035E964318BB9AB9009AF193 /* FMDatabase.m in Sources */,
 				03046EFA18BA41DF002F9183 /* DPAppDelegate.m in Sources */,
+				035E964618BB9AB9009AF193 /* FMDatabaseQueue.m in Sources */,
+				035E964518BB9AB9009AF193 /* FMDatabasePool.m in Sources */,
+				035E961F18BB8D85009AF193 /* DPDreamMainListViewController.m in Sources */,
+				035E962218BB8DFC009AF193 /* DPDreamSearchListViewController.m in Sources */,
+				035E962518BB8E1A009AF193 /* DPDreamDtailViewController.m in Sources */,
 				03046EF618BA41DF002F9183 /* main.m in Sources */,
+				035E964418BB9AB9009AF193 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +589,7 @@
 				03046F1418BA41DF002F9183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03046F1518BA41DF002F9183 /* Build configuration list for PBXNativeTarget "DreamParseTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +598,7 @@
 				03046F1718BA41DF002F9183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - 正在发生的梦-->
+        <!--Dream Main List View Controller - 正在发生的梦-->
         <scene sceneID="D5E-oW-ccN">
             <objects>
-                <tableViewController id="5R6-nZ-wU3" sceneMemberID="viewController">
+                <tableViewController id="5R6-nZ-wU3" customClass="DPDreamMainListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" id="jSM-ce-o7p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,8 +40,8 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="（昨晚 11 人）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARU-Qf-r0P">
-                                            <rect key="frame" x="104" y="17" width="81" height="15"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="（昨晚 11 人梦到）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARU-Qf-r0P">
+                                            <rect key="frame" x="104" y="17" width="105" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="642" y="116"/>
         </scene>
-        <!--Table View Controller - 解梦-->
+        <!--Dream Search List View Controller - 解梦-->
         <scene sceneID="EcG-PT-io2">
             <objects>
-                <tableViewController id="TFg-x4-3cd" sceneMemberID="viewController">
+                <tableViewController id="TFg-x4-3cd" customClass="DPDreamSearchListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aCB-Ii-YZI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="1102" y="458"/>
         </scene>
-        <!--View Controller - 梦见 电脑-->
+        <!--Dream Dtail View Controller - 梦见 电脑-->
         <scene sceneID="pwJ-CR-3YS">
             <objects>
-                <viewController id="5yP-dD-knG" sceneMemberID="viewController">
+                <viewController id="5yP-dD-knG" customClass="DPDreamDtailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="14A-UO-bH7"/>
                         <viewControllerLayoutGuide type="bottom" id="eFN-KP-BSE"/>
@@ -182,7 +182,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHv-Vb-3t6">
-                                <rect key="frame" x="20" y="508" width="40" height="40"/>
+                                <rect key="frame" x="20" y="483" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
