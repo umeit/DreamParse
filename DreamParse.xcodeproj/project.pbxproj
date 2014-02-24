@@ -27,8 +27,6 @@
 		035E962918BB8ED9009AF193 /* DPDBLoigc.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962818BB8ED9009AF193 /* DPDBLoigc.m */; };
 		035E962D18BB8F1A009AF193 /* DPDreamEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962C18BB8F1A009AF193 /* DPDreamEntity.m */; };
 		035E963118BB9301009AF193 /* DPDreamService.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963018BB9301009AF193 /* DPDreamService.m */; };
-		035E964118BB9AB9009AF193 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 035E963418BB9AB9009AF193 /* .gitignore */; };
-		035E964218BB9AB9009AF193 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 035E963518BB9AB9009AF193 /* .travis.yml */; };
 		035E964318BB9AB9009AF193 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963718BB9AB9009AF193 /* FMDatabase.m */; };
 		035E964418BB9AB9009AF193 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963918BB9AB9009AF193 /* FMDatabaseAdditions.m */; };
 		035E964518BB9AB9009AF193 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963B18BB9AB9009AF193 /* FMDatabasePool.m */; };
@@ -78,8 +76,6 @@
 		035E962C18BB8F1A009AF193 /* DPDreamEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamEntity.m; sourceTree = "<group>"; };
 		035E962F18BB9301009AF193 /* DPDreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamService.h; sourceTree = "<group>"; };
 		035E963018BB9301009AF193 /* DPDreamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamService.m; sourceTree = "<group>"; };
-		035E963418BB9AB9009AF193 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		035E963518BB9AB9009AF193 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		035E963618BB9AB9009AF193 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		035E963718BB9AB9009AF193 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		035E963818BB9AB9009AF193 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -258,8 +254,6 @@
 		035E963318BB9AB9009AF193 /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
-				035E963418BB9AB9009AF193 /* .gitignore */,
-				035E963518BB9AB9009AF193 /* .travis.yml */,
 				035E963618BB9AB9009AF193 /* FMDatabase.h */,
 				035E963718BB9AB9009AF193 /* FMDatabase.m */,
 				035E963818BB9AB9009AF193 /* FMDatabaseAdditions.h */,
@@ -351,8 +345,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035E964218BB9AB9009AF193 /* .travis.yml in Resources */,
-				035E964118BB9AB9009AF193 /* .gitignore in Resources */,
 				03046F1A18BA435C002F9183 /* DP.db in Resources */,
 				03046EF418BA41DF002F9183 /* InfoPlist.strings in Resources */,
 				03046EFC18BA41DF002F9183 /* Images.xcassets in Resources */,
