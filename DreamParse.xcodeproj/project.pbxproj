@@ -21,6 +21,8 @@
 		03046F0F18BA41DF002F9183 /* DreamParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03046F0E18BA41DF002F9183 /* DreamParseTests.m */; };
 		03046F1A18BA435C002F9183 /* DP.db in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1918BA435C002F9183 /* DP.db */; };
 		03046F1C18BA43A9002F9183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1B18BA43A9002F9183 /* Main.storyboard */; };
+		0329C0DF18C38773003D9FC9 /* DPMainPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0329C0DE18C38773003D9FC9 /* DPMainPageCell.m */; };
+		0329C0E418C38A7B003D9FC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0329C0E018C3895B003D9FC9 /* libsqlite3.dylib */; };
 		035E961F18BB8D85009AF193 /* DPDreamMainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E961E18BB8D85009AF193 /* DPDreamMainListViewController.m */; };
 		035E962218BB8DFC009AF193 /* DPDreamSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962118BB8DFC009AF193 /* DPDreamSearchListViewController.m */; };
 		035E962518BB8E1A009AF193 /* DPDreamDtailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E962418BB8E1A009AF193 /* DPDreamDtailViewController.m */; };
@@ -31,7 +33,6 @@
 		035E964418BB9AB9009AF193 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963918BB9AB9009AF193 /* FMDatabaseAdditions.m */; };
 		035E964518BB9AB9009AF193 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963B18BB9AB9009AF193 /* FMDatabasePool.m */; };
 		035E964618BB9AB9009AF193 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */; };
-		035E964718BB9AB9009AF193 /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963E18BB9AB9009AF193 /* fmdb.m */; };
 		035E964818BB9AB9009AF193 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E964018BB9AB9009AF193 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,9 @@
 		03046F0E18BA41DF002F9183 /* DreamParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamParseTests.m; sourceTree = "<group>"; };
 		03046F1918BA435C002F9183 /* DP.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = DP.db; sourceTree = "<group>"; };
 		03046F1B18BA43A9002F9183 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0329C0DD18C38773003D9FC9 /* DPMainPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPMainPageCell.h; sourceTree = "<group>"; };
+		0329C0DE18C38773003D9FC9 /* DPMainPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPMainPageCell.m; sourceTree = "<group>"; };
+		0329C0E018C3895B003D9FC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		035E961D18BB8D85009AF193 /* DPDreamMainListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamMainListViewController.h; sourceTree = "<group>"; };
 		035E961E18BB8D85009AF193 /* DPDreamMainListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamMainListViewController.m; sourceTree = "<group>"; };
 		035E962018BB8DFC009AF193 /* DPDreamSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamSearchListViewController.h; sourceTree = "<group>"; };
@@ -84,7 +88,6 @@
 		035E963B18BB9AB9009AF193 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		035E963C18BB9AB9009AF193 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
 		035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		035E963E18BB9AB9009AF193 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
 		035E963F18BB9AB9009AF193 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		035E964018BB9AB9009AF193 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0329C0E418C38A7B003D9FC9 /* libsqlite3.dylib in Frameworks */,
 				03046EEC18BA41DF002F9183 /* CoreGraphics.framework in Frameworks */,
 				03046EEE18BA41DF002F9183 /* UIKit.framework in Frameworks */,
 				03046EEA18BA41DF002F9183 /* Foundation.framework in Frameworks */,
@@ -135,6 +139,7 @@
 		03046EE818BA41DF002F9183 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0329C0E018C3895B003D9FC9 /* libsqlite3.dylib */,
 				03046EE918BA41DF002F9183 /* Foundation.framework */,
 				03046EEB18BA41DF002F9183 /* CoreGraphics.framework */,
 				03046EED18BA41DF002F9183 /* UIKit.framework */,
@@ -146,6 +151,7 @@
 		03046EEF18BA41DF002F9183 /* DreamParse */ = {
 			isa = PBXGroup;
 			children = (
+				0329C0DC18C38759003D9FC9 /* View */,
 				035E963218BB9AB9009AF193 /* Lib */,
 				035E962E18BB92EE009AF193 /* Service */,
 				035E962A18BB8F09009AF193 /* Entity */,
@@ -197,6 +203,15 @@
 			);
 			name = Resource;
 			path = resource;
+			sourceTree = "<group>";
+		};
+		0329C0DC18C38759003D9FC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0329C0DD18C38773003D9FC9 /* DPMainPageCell.h */,
+				0329C0DE18C38773003D9FC9 /* DPMainPageCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		035E961C18BB8D3E009AF193 /* Controller */ = {
@@ -262,7 +277,6 @@
 				035E963B18BB9AB9009AF193 /* FMDatabasePool.m */,
 				035E963C18BB9AB9009AF193 /* FMDatabaseQueue.h */,
 				035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */,
-				035E963E18BB9AB9009AF193 /* fmdb.m */,
 				035E963F18BB9AB9009AF193 /* FMResultSet.h */,
 				035E964018BB9AB9009AF193 /* FMResultSet.m */,
 			);
@@ -367,11 +381,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035E964718BB9AB9009AF193 /* fmdb.m in Sources */,
 				035E962918BB8ED9009AF193 /* DPDBLoigc.m in Sources */,
 				035E964818BB9AB9009AF193 /* FMResultSet.m in Sources */,
 				035E963118BB9301009AF193 /* DPDreamService.m in Sources */,
 				035E962D18BB8F1A009AF193 /* DPDreamEntity.m in Sources */,
+				0329C0DF18C38773003D9FC9 /* DPMainPageCell.m in Sources */,
 				035E964318BB9AB9009AF193 /* FMDatabase.m in Sources */,
 				03046EFA18BA41DF002F9183 /* DPAppDelegate.m in Sources */,
 				035E964618BB9AB9009AF193 /* FMDatabaseQueue.m in Sources */,
@@ -502,6 +516,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DreamParse/DreamParse-Prefix.pch";
 				INFOPLIST_FILE = "DreamParse/DreamParse-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -515,6 +530,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DreamParse/DreamParse-Prefix.pch";
 				INFOPLIST_FILE = "DreamParse/DreamParse-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

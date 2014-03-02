@@ -14,8 +14,6 @@
 
 + (DPDreamEntity *)dreamWithDBID:(NSInteger)dbID;
 
-+ (NSArray *)likeKeyListWithKey:(NSString *)key;
-
 + (NSArray *)dreamListWithDBIDs:(NSArray *)idList;
 
 @end

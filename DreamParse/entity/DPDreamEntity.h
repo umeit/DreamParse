@@ -12,10 +12,10 @@
 
 @property (nonatomic) NSInteger dbID;
 
+@property (nonatomic) NSInteger category;
+
 @property (nonatomic, strong) NSString *key;
 
 @property (nonatomic, strong) NSString *bodyText;
-
-@property (nonatomic, strong) NSArray *likeKyeList;
 
 @end

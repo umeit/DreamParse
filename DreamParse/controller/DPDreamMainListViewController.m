@@ -8,32 +8,26 @@
 
 #import "DPDreamMainListViewController.h"
 #import "DPDreamService.h"
+#import "DPMainPageCell.h"
+#import "DPDreamEntity.h"
+
+#define DreamService [DPDreamService sharedInstance]
 
 @interface DPDreamMainListViewController ()
 
-@property (nonatomic, strong) NSMutableArray *dreamList;
-
-@property (nonatomic, strong) DPDreamService *dreamService;
+@property (strong, nonatomic) NSArray *mainPageList;
 
 @end
 
 @implementation DPDreamMainListViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self.dreamService randomDreamList:^(NSArray *list) {
-        self.dreamList = [NSMutableArray arrayWithArray:list];
+    [DreamService mainPageList:^(NSArray *list) {
+        self.mainPageList = list;
+        [self.tableView reloadData];
     }];
 }
 
@@ -42,23 +36,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dreamList count];
+    return [self.mainPageList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"MainPageListCell";
+    DPMainPageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    [self configureCell:cell forIndexPath:indexPath];
     
     return cell;
 }
 
+
+#pragma mark - Private
+
+- (void)configureCell:(DPMainPageCell *)cell forIndexPath:(NSIndexPath *)indexPath
+{
+    DPDreamEntity *dreamEntity = self.mainPageList[indexPath.row];
+    
+    cell.dreamTitleLabel.text = dreamEntity.key;
+    cell.dreamTextLabel.text = dreamEntity.bodyText;
+}
 
 @end

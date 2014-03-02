@@ -19,11 +19,6 @@
     return nil;
 }
 
-+ (NSArray *)likeKeyListWithKey:(NSString *)key
-{
-    return nil;
-}
-
 + (NSArray *)dreamListWithDBIDs:(NSArray *)idList
 {
     FMDatabase *db = [FMDatabase databaseWithPath:DBPath];
@@ -40,17 +35,29 @@
     NSString *SQL = [NSString stringWithFormat:@"SELECT * FROM zgjm WHERE %@",
                      [whereString substringToIndex:[whereString length] - 4]];
     FMResultSet *s = [db executeQuery:SQL];
+    
+    NSMutableArray *dreameEntiryArrary = [[NSMutableArray alloc] init];
+    
     while ([s next]) {
-        
-        
-        
+        [dreameEntiryArrary addObject:[self dreamEntityWithFMResult:s]];
     }
     
-    return nil;
+    return dreameEntiryArrary;
 }
 
 
 #pragma - mark Private
+
++ (DPDreamEntity *)dreamEntityWithFMResult:(FMResultSet *)s
+{
+    DPDreamEntity *dreamEntity = [[DPDreamEntity alloc] init];
+//    dreamEntity.dbID = [s intForColumnIndex:0];
+    dreamEntity.category = [s intForColumnIndex:0];
+    dreamEntity.key = [s stringForColumnIndex:1];
+    dreamEntity.bodyText = [s stringForColumnIndex:2];
+    
+    return dreamEntity;
+}
 
 + (NSString *)dbPath
 {

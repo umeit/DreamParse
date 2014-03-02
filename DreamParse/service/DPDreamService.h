@@ -10,10 +10,12 @@
 
 @class DPDreamEntity;
 
-typedef void(^DPDreamServiceListBlock)(NSArray *);
+typedef void(^DPDreamServiceListBlock)(NSArray *list);
 
 @interface DPDreamService : NSObject
 
-- (void)randomDreamList:(DPDreamServiceListBlock)block;
++ (instancetype)sharedInstance;
+
+- (void)mainPageList:(DPDreamServiceListBlock)block;
 
 @end

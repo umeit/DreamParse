@@ -11,20 +11,40 @@
 
 @implementation DPDreamService
 
-- (void)randomDreamList:(DPDreamServiceListBlock)block
++ (instancetype)sharedInstance
+{
+    static DPDreamService *instance = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[DPDreamService alloc] init];
+    });
+    
+    return instance;
+}
+
+- (void)mainPageList:(DPDreamServiceListBlock)block
+{
+    NSArray *randomNumberList = [self makeRandomNumberList:50];
+    
+    NSArray *dreamList = [DPDBLoigc dreamListWithDBIDs:randomNumberList];
+    
+    block(dreamList);
+}
+
+// 返回一个随机数列表
+- (NSArray *)makeRandomNumberList:(NSInteger)listCount
 {
     NSMutableArray *randomList = [[NSMutableArray alloc] init];
     
     NSInteger random = (arc4random() % 34) + 1;
     
-    while ([randomList count] < 50) {
+    while ([randomList count] < listCount) {
         [randomList addObject:@(random)];
         random += 34;
     }
     
-    NSArray *dreamList = [DPDBLoigc dreamListWithDBIDs:randomList];
-    
-    block(dreamList);
+    return randomList;
 }
 
 @end

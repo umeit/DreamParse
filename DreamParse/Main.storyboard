@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="71" id="P5Y-lQ-qM3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainPageListCell" rowHeight="71" id="P5Y-lQ-qM3" customClass="DPMainPageCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P5Y-lQ-qM3" id="ofO-Pw-FDt">
@@ -50,6 +50,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dreamTextLabel" destination="wCa-Nh-aet" id="2i7-R7-TnH"/>
+                                    <outlet property="dreamTitleLabel" destination="29Q-3j-VQA" id="aj0-rZ-2o8"/>
                                     <segue destination="5yP-dD-knG" kind="push" id="yFa-Id-1sk"/>
                                 </connections>
                             </tableViewCell>
@@ -197,6 +199,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MD7-7n-OeN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djg-4k-H6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="t9J-9X-sC8" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jZQ-6L-xfp">
                         <autoresizingMask key="autoresizingMask"/>
@@ -205,9 +208,8 @@
                         <segue destination="5R6-nZ-wU3" kind="relationship" relationship="rootViewController" id="KuL-6a-uXx"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="djg-4k-H6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="184" y="116"/>
+            <point key="canvasLocation" x="183" y="137"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -216,6 +218,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="82p-Xp-6jT"/>
+        <segue reference="yFa-Id-1sk"/>
     </inferredMetricsTieBreakers>
 </document>
