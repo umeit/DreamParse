@@ -16,4 +16,6 @@
 
 + (NSArray *)dreamListWithDBIDs:(NSArray *)idList;
 
++ (DPDreamEntity *)searchDreamWithKeyWord:(NSString *)keyWord;
+
 @end

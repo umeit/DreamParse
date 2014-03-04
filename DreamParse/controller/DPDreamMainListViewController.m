@@ -7,13 +7,16 @@
 //
 
 #import "DPDreamMainListViewController.h"
+#import "DPDreamDtailViewController.h"
 #import "DPDreamService.h"
 #import "DPMainPageCell.h"
 #import "DPDreamEntity.h"
 
 #define DreamService [DPDreamService sharedInstance]
 
-@interface DPDreamMainListViewController ()
+@interface DPDreamMainListViewController () <UISearchBarDelegate>
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @property (strong, nonatomic) NSArray *mainPageList;
 
@@ -55,6 +58,41 @@
 }
 
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DPDreamEntity *dreamEntity = self.mainPageList[[self.tableView indexPathForSelectedRow].row];
+    
+    
+    UIViewController *vc = segue.destinationViewController;
+    
+    if ([vc respondsToSelector:@selector(setDreamEntity:)]) {
+        [vc performSelector:@selector(setDreamEntity:) withObject:dreamEntity];
+    }
+}
+
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    // 根据关键词搜索
+    NSString *keyWord = [searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    DPDreamEntity *dreamEntity = [DreamService searchDreamWithKeyWord:keyWord];
+    
+    if (dreamEntity) {
+        DPDreamDtailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DPDreamDtailViewController"];
+        detailViewController.dreamEntity = dreamEntity;
+        detailViewController.title = keyWord;
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
+    else {
+        
+    }
+}
+
+
 #pragma mark - Private
 
 - (void)configureCell:(DPMainPageCell *)cell forIndexPath:(NSIndexPath *)indexPath
@@ -62,7 +100,7 @@
     DPDreamEntity *dreamEntity = self.mainPageList[indexPath.row];
     
     cell.dreamTitleLabel.text = dreamEntity.key;
-    cell.dreamTextLabel.text = dreamEntity.bodyText;
+    cell.dreamTextLabel.text = [dreamEntity.bodyText stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
 }
 
 @end

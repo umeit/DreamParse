@@ -45,6 +45,25 @@
     return dreameEntiryArrary;
 }
 
++ (DPDreamEntity *)searchDreamWithKeyWord:(NSString *)keyWord
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:DBPath];
+    if (![db open]) {
+        return nil;
+    }
+    
+    NSString *SQL = [NSString stringWithFormat:@"SELECT * FROM zgjm WHERE title LIKE '%%%@%%'", keyWord];
+    
+    FMResultSet *s = [db executeQuery:SQL];
+    
+    DPDreamEntity *dreamEntity;
+    if ([s next]) {
+        dreamEntity = [self dreamEntityWithFMResult:s];
+    }
+    
+    return dreamEntity;
+}
+
 
 #pragma - mark Private
 

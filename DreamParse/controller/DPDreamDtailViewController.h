@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DPDreamEntity;
+
 @interface DPDreamDtailViewController : UIViewController
+
+@property (nonatomic, strong) DPDreamEntity *dreamEntity;
 
 @end

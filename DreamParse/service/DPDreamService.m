@@ -8,6 +8,7 @@
 
 #import "DPDreamService.h"
 #import "DPDBLoigc.h"
+#import "DPDreamEntity.h"
 
 @implementation DPDreamService
 
@@ -31,6 +32,16 @@
     
     block(dreamList);
 }
+
+- (DPDreamEntity *)searchDreamWithKeyWord:(NSString *)keyWord
+{
+    DPDreamEntity *dreamEntity = [DPDBLoigc searchDreamWithKeyWord:keyWord];
+    
+    return dreamEntity;
+}
+
+
+#pragma mark - Private
 
 // 返回一个随机数列表
 - (NSArray *)makeRandomNumberList:(NSInteger)listCount
