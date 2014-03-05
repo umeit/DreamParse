@@ -46,16 +46,25 @@
 // 返回一个随机数列表
 - (NSArray *)makeRandomNumberList:(NSInteger)listCount
 {
+    NSMutableSet *randomSet = [[NSMutableSet alloc] init];
+    
     NSMutableArray *randomList = [[NSMutableArray alloc] init];
     
-    NSInteger random = (arc4random() % 34) + 1;
+    NSInteger randomS = 34;
+    NSInteger random;
     
-    while ([randomList count] < listCount) {
-        [randomList addObject:@(random)];
-        random += 34;
+//    while ([randomList count] < listCount) {
+//        random = (arc4random() % randomS) + 1;
+//        [randomList addObject:@(random)];
+//        randomS += 34;
+//    }
+    
+    while ([randomSet count] < listCount) {
+        random = (arc4random() % 1700) + 1;
+        [randomSet addObject:@(random)];
     }
     
-    return randomList;
+    return [randomSet allObjects];
 }
 
 @end

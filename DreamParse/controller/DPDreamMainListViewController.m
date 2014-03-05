@@ -7,7 +7,7 @@
 //
 
 #import "DPDreamMainListViewController.h"
-#import "DPDreamDtailViewController.h"
+#import "DPDreamDetailViewController.h"
 #import "DPDreamService.h"
 #import "DPMainPageCell.h"
 #import "DPDreamEntity.h"
@@ -82,13 +82,13 @@
     DPDreamEntity *dreamEntity = [DreamService searchDreamWithKeyWord:keyWord];
     
     if (dreamEntity) {
-        DPDreamDtailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DPDreamDtailViewController"];
+        DPDreamDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DPDreamDtailViewController"];
         detailViewController.dreamEntity = dreamEntity;
         detailViewController.title = keyWord;
         [self.navigationController pushViewController:detailViewController animated:YES];
     }
     else {
-        
+        // 没有搜索结果
     }
 }
 

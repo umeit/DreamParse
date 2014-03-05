@@ -58,7 +58,7 @@
                                 <connections>
                                     <outlet property="dreamTextLabel" destination="wCa-Nh-aet" id="2i7-R7-TnH"/>
                                     <outlet property="dreamTitleLabel" destination="29Q-3j-VQA" id="aj0-rZ-2o8"/>
-                                    <segue destination="5yP-dD-knG" kind="push" id="yFa-Id-1sk"/>
+                                    <segue destination="rXV-D3-kFD" kind="push" id="FQN-wx-xfD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,64 +88,43 @@
             </objects>
             <point key="canvasLocation" x="644" y="116"/>
         </scene>
-        <!--Dream Dtail View Controller - 梦见 电脑-->
-        <scene sceneID="pwJ-CR-3YS">
+        <!--Dream Detail View Controller-->
+        <scene sceneID="wC9-mJ-vXj">
             <objects>
-                <viewController storyboardIdentifier="DPDreamDtailViewController" id="5yP-dD-knG" customClass="DPDreamDtailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="14A-UO-bH7"/>
-                        <viewControllerLayoutGuide type="bottom" id="eFN-KP-BSE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2zY-D6-Eyx">
+                <tableViewController id="rXV-D3-kFD" customClass="DPDreamDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="139" sectionHeaderHeight="22" sectionFooterHeight="22" id="VgG-LS-mVh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="电脑可以表示精神上的印象，它代表着过去、现在和未来。电脑可能正在回忆往事或者对以前储存的信息进行理顺。电脑在梦中多半象征着梦者自己所具备的天赋和个人的潜力。" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="230" translatesAutoresizingMaskIntoConstraints="NO" id="oRL-vg-eAa">
-                                <rect key="frame" x="20" y="118" width="230" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="基本解析：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6am-ak-ICe">
-                                <rect key="frame" x="20" y="89" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="告诉朋友" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTY-AJ-bZQ">
-                                <rect key="frame" x="20" y="289" width="68" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我做了一个关于电脑的梦" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmD-le-9ID">
-                                <rect key="frame" x="20" y="314" width="170" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHv-Vb-3t6">
-                                <rect key="frame" x="20" y="343" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-Fk-CVa">
-                                <rect key="frame" x="192" y="311" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="梦见 电脑" id="2sE-Fc-Er0"/>
-                    <connections>
-                        <outlet property="detailTextLabel" destination="oRL-vg-eAa" id="S1a-mb-SGE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4VE-0c-QaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DPDreamBodyTextCell" rowHeight="139" id="3cx-Sv-0dw" customClass="DPDreamBodyTextCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="139"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cx-Sv-0dw" id="Rhg-Oj-VXx">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="基本解析：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2k-dH-QNC">
+                                            <rect key="frame" x="20" y="20" width="85" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rXV-D3-kFD" id="sa3-vR-9D4"/>
+                            <outlet property="delegate" destination="rXV-D3-kFD" id="mg6-1f-1GN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="QqX-46-6cL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXx-OD-dGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="116"/>
+            <point key="canvasLocation" x="1084" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MD7-7n-OeN">

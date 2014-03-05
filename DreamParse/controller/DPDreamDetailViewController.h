@@ -1,8 +1,8 @@
 //
-//  DPDreamDtailViewController.h
+//  DPDreamDetailViewController.h
 //  DreamParse
 //
-//  Created by Liu Feng on 14-2-24.
+//  Created by Liu Feng on 14-3-5.
 //  Copyright (c) 2014年 Liu Feng. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class DPDreamEntity;
 
-@interface DPDreamDtailViewController : UIViewController
+@interface DPDreamDetailViewController : UITableViewController
 
 @property (nonatomic, strong) DPDreamEntity *dreamEntity;
 
