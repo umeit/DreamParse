@@ -12,16 +12,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="HdH-OG-vf3">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="搜索" id="d3W-UM-QX3">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
-                            <scopeButtonTitles>
-                                <string>Title</string>
-                                <string>Title</string>
-                            </scopeButtonTitles>
                             <connections>
-                                <outlet property="delegate" destination="5R6-nZ-wU3" id="wVs-8J-kuK"/>
+                                <outlet property="delegate" destination="5R6-nZ-wU3" id="m1S-dq-X73"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -72,8 +68,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchBar" destination="HdH-OG-vf3" id="m7I-it-Ejk"/>
-                        <outlet property="searchDisplayController" destination="JnA-oP-sjR" id="C8u-56-Woz"/>
+                        <outlet property="searchDisplayController" destination="cLy-sQ-Aar" id="9eR-nd-dTq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bi-xh-cV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,6 +78,15 @@
                         <outlet property="searchContentsController" destination="5R6-nZ-wU3" id="8tw-yS-PV5"/>
                         <outlet property="searchResultsDataSource" destination="5R6-nZ-wU3" id="1Zb-tU-GqB"/>
                         <outlet property="searchResultsDelegate" destination="5R6-nZ-wU3" id="ZO5-1k-3bQ"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="cLy-sQ-Aar">
+                    <connections>
+                        <outlet property="delegate" destination="5R6-nZ-wU3" id="Q01-6y-Fc6"/>
+                        <outlet property="searchBar" destination="d3W-UM-QX3" id="RfX-TW-cqC"/>
+                        <outlet property="searchContentsController" destination="5R6-nZ-wU3" id="onE-Gl-e0Z"/>
+                        <outlet property="searchResultsDataSource" destination="5R6-nZ-wU3" id="ICO-k0-Xo9"/>
+                        <outlet property="searchResultsDelegate" destination="5R6-nZ-wU3" id="B3e-i6-dTT"/>
                     </connections>
                 </searchDisplayController>
             </objects>

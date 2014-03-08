@@ -20,6 +20,8 @@
 
 @property (strong, nonatomic) NSArray *mainPageList;
 
+@property (strong, nonatomic) NSArray *searchResultList;
+
 @end
 
 @implementation DPDreamMainListViewController
@@ -44,17 +46,28 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [self.searchResultList count];
+    }
     return [self.mainPageList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MainPageListCell";
-    DPMainPageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *MainPageListCellIdentifier = @"MainPageListCell";
+    static NSString *MainPageResultListCellIdentifier = @"MainPageResultList";
     
-    [self configureCell:cell forIndexPath:indexPath];
-    
-    return cell;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MainPageResultListCellIdentifier
+                                                                forIndexPath:indexPath];
+        return cell;
+    }
+    else {
+        DPMainPageCell *cell = [tableView dequeueReusableCellWithIdentifier:MainPageListCellIdentifier
+                                                               forIndexPath:indexPath];
+        [self configureCell:cell forIndexPath:indexPath];
+        return cell;
+    }
 }
 
 
