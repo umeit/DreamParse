@@ -68,6 +68,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="d3W-UM-QX3" id="eBS-yg-0Wu"/>
                         <outlet property="searchDisplayController" destination="cLy-sQ-Aar" id="9eR-nd-dTq"/>
                     </connections>
                 </tableViewController>

@@ -18,6 +18,6 @@ typedef void(^DPDreamServiceListBlock)(NSArray *list);
 
 - (void)mainPageList:(DPDreamServiceListBlock)block;
 
-- (DPDreamEntity *)searchDreamWithKeyWord:(NSString *)keyWord;
+- (NSArray *)searchDreamWithKeyWord:(NSString *)keyWord;
 
 @end

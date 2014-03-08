@@ -45,7 +45,7 @@
     return dreameEntiryArrary;
 }
 
-+ (DPDreamEntity *)searchDreamWithKeyWord:(NSString *)keyWord
++ (NSArray *)searchDreamWithKeyWord:(NSString *)keyWord
 {
     FMDatabase *db = [FMDatabase databaseWithPath:DBPath];
     if (![db open]) {
@@ -56,12 +56,21 @@
     
     FMResultSet *s = [db executeQuery:SQL];
     
+    NSMutableArray *dreamEntityList = [[NSMutableArray alloc] init];
     DPDreamEntity *dreamEntity;
-    if ([s next]) {
+    
+    while ([s next]) {
         dreamEntity = [self dreamEntityWithFMResult:s];
+        if (dreamEntity) {
+            [dreamEntityList addObject:dreamEntity];
+        }
     }
     
-    return dreamEntity;
+//    if ([s next]) {
+//        dreamEntity = [self dreamEntityWithFMResult:s];
+//    }
+    
+    return dreamEntityList;
 }
 
 

@@ -33,11 +33,11 @@
     block(dreamList);
 }
 
-- (DPDreamEntity *)searchDreamWithKeyWord:(NSString *)keyWord
+- (NSArray *)searchDreamWithKeyWord:(NSString *)keyWord
 {
-    DPDreamEntity *dreamEntity = [DPDBLoigc searchDreamWithKeyWord:keyWord];
+    NSArray *dreamEntityList = [DPDBLoigc searchDreamWithKeyWord:keyWord];
     
-    return dreamEntity;
+    return dreamEntityList;
 }
 
 
@@ -47,17 +47,7 @@
 - (NSArray *)makeRandomNumberList:(NSInteger)listCount
 {
     NSMutableSet *randomSet = [[NSMutableSet alloc] init];
-    
-    NSMutableArray *randomList = [[NSMutableArray alloc] init];
-    
-    NSInteger randomS = 34;
     NSInteger random;
-    
-//    while ([randomList count] < listCount) {
-//        random = (arc4random() % randomS) + 1;
-//        [randomList addObject:@(random)];
-//        randomS += 34;
-//    }
     
     while ([randomSet count] < listCount) {
         random = (arc4random() % 1700) + 1;

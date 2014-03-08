@@ -14,7 +14,7 @@
 
 #define DreamService [DPDreamService sharedInstance]
 
-@interface DPDreamMainListViewController () <UISearchBarDelegate>
+@interface DPDreamMainListViewController () <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -29,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MainPageResultList"];
     
     [DreamService mainPageList:^(NSArray *list) {
         self.mainPageList = list;
@@ -60,6 +62,8 @@
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MainPageResultListCellIdentifier
                                                                 forIndexPath:indexPath];
+        DPDreamEntity *dreamEntity = self.searchResultList[indexPath.row];
+        cell.textLabel.text = dreamEntity.key;
         return cell;
     }
     else {
@@ -103,6 +107,24 @@
     else {
         // 没有搜索结果
     }
+}
+
+
+#pragma mark - UISearchDisplayDelegate
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    NSString *keyWord = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if ([keyWord isEqualToString:@""]) {
+        return NO;
+    }
+    
+    self.searchResultList = [DreamService searchDreamWithKeyWord:keyWord];
+    if (self.searchResultList && [self.searchResultList count] > 0) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 
