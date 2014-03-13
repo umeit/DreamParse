@@ -7,11 +7,13 @@
 //
 
 #import "DPAppDelegate.h"
+#import "MobClick.h"
 
 @implementation DPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MobClick startWithAppkey:@"5321d22a56240b031d03dc4d" reportPolicy:SEND_ON_EXIT channelId:nil];
     return YES;
 }
 

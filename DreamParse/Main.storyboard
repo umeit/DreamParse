@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="t9J-9X-sC8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="t9J-9X-sC8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -73,14 +73,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bi-xh-cV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="JnA-oP-sjR">
-                    <connections>
-                        <outlet property="delegate" destination="5R6-nZ-wU3" id="YJh-OY-NDS"/>
-                        <outlet property="searchContentsController" destination="5R6-nZ-wU3" id="8tw-yS-PV5"/>
-                        <outlet property="searchResultsDataSource" destination="5R6-nZ-wU3" id="1Zb-tU-GqB"/>
-                        <outlet property="searchResultsDelegate" destination="5R6-nZ-wU3" id="ZO5-1k-3bQ"/>
-                    </connections>
-                </searchDisplayController>
                 <searchDisplayController id="cLy-sQ-Aar">
                     <connections>
                         <outlet property="delegate" destination="5R6-nZ-wU3" id="Q01-6y-Fc6"/>
@@ -96,7 +88,7 @@
         <!--Dream Detail View Controller-->
         <scene sceneID="wC9-mJ-vXj">
             <objects>
-                <tableViewController id="rXV-D3-kFD" customClass="DPDreamDetailViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DPDreamDetailViewController" id="rXV-D3-kFD" customClass="DPDreamDetailViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="139" sectionHeaderHeight="22" sectionFooterHeight="22" id="VgG-LS-mVh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,8 +110,32 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DPSharedButtonCell" rowHeight="51" id="ZdZ-Nw-bvT" customClass="DPDetailViewSharedButtonCell">
+                                <rect key="frame" x="0.0" y="225" width="320" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZdZ-Nw-bvT" id="q3A-t7-i9y">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2u-dP-C0K">
+                                            <rect key="frame" x="107" y="10" width="106" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="分享给朋友"/>
+                                            <connections>
+                                                <action selector="sharedButtonPress:" destination="rXV-D3-kFD" eventType="touchUpInside" id="Zld-ho-CJa"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="sharedButton" destination="G2u-dP-C0K" id="bdD-g6-tYs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="rXV-D3-kFD" id="sa3-vR-9D4"/>
                             <outlet property="delegate" destination="rXV-D3-kFD" id="mg6-1f-1GN"/>

@@ -1,4 +1,4 @@
-//
+    //
 //  DPDreamDetailViewController.m
 //  DreamParse
 //
@@ -8,6 +8,11 @@
 
 #import "DPDreamDetailViewController.h"
 #import "DPDreamEntity.h"
+#import "DPDetailViewSharedButtonCell.h"
+#import "DPDreamBodyTextCell.h"
+#import "MobClick.h"
+
+#define DetailView @"Detail View"
 
 @interface DPDreamDetailViewController ()
 
@@ -31,6 +36,21 @@
     self.title = self.dreamEntity.key;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [MobClick beginLogPageView:DetailView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [MobClick endLogPageView:DetailView];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -40,28 +60,35 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *bodyTextCell = @"DPDreamBodyTextCell";
+    static NSString *sharedButtonCell = @"DPSharedButtonCell";
     
-    UITableViewCell *cell;
     if (indexPath.row == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:bodyTextCell forIndexPath:indexPath];
+        DPDreamBodyTextCell *cell = [tableView dequeueReusableCellWithIdentifier:bodyTextCell forIndexPath:indexPath];
+        
+        NSString *detailText = [self.dreamEntity.bodyText stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
+        CGSize detailTextLabelSize = [self labelSizeWithMaxWidth:280 content:detailText];
+        UILabel *bodyTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 45, detailTextLabelSize.width, detailTextLabelSize.height)];
+        bodyTextLabel.text = detailText;
+        bodyTextLabel.numberOfLines = 0;
+        bodyTextLabel.textColor = [UIColor darkGrayColor];
+        [cell addSubview:bodyTextLabel];
+        
+        return cell;
     }
-    NSString *detailText = [self.dreamEntity.bodyText stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
-    CGSize detailTextLabelSize = [self labelSizeWithMaxWidth:280 content:detailText];
-    UILabel *bodyTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 45, detailTextLabelSize.width, detailTextLabelSize.height)];
-    bodyTextLabel.text = detailText;
-    bodyTextLabel.numberOfLines = 0;
-    bodyTextLabel.textColor = [UIColor darkGrayColor];
-    [cell addSubview:bodyTextLabel];
+    else if (indexPath.row == 1) {
+        DPDetailViewSharedButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:sharedButtonCell forIndexPath:indexPath];
+//        [cell.sharedButton addTarget:self action:@selector(sharedButtonPress:) forControlEvents:UIControlEventTouchUpInside];
+        
+        return cell;
+    }
     
-    // Configure the cell...
-    
-    return cell;
+    return nil;
 }
 
 
@@ -69,10 +96,26 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *detailText = [self.dreamEntity.bodyText stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
-    CGSize detailTextLabelSize = [self labelSizeWithMaxWidth:280 content:detailText];
-    CGFloat cellHeight = 45 + detailTextLabelSize.height + 5;
-    return cellHeight;
+    if (indexPath.row == 0) {
+        NSString *detailText = [self.dreamEntity.bodyText stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
+        CGSize detailTextLabelSize = [self labelSizeWithMaxWidth:280 content:detailText];
+        CGFloat cellHeight = 45 + detailTextLabelSize.height + 20;
+        
+        return cellHeight;
+    }
+    else if (indexPath.row == 1) {
+        return 51;
+    }
+    
+    return 44;
+}
+
+
+#pragma mark - Action
+
+- (IBAction)sharedButtonPress:(UIButton *)sender
+{
+    NSLog(@"string");
 }
 
 

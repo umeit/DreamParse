@@ -21,6 +21,9 @@
 		03046F0F18BA41DF002F9183 /* DreamParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03046F0E18BA41DF002F9183 /* DreamParseTests.m */; };
 		03046F1A18BA435C002F9183 /* DP.db in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1918BA435C002F9183 /* DP.db */; };
 		03046F1C18BA43A9002F9183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1B18BA43A9002F9183 /* Main.storyboard */; };
+		031D35EC18D1FD700016243C /* DPDetailViewSharedButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 031D35EB18D1FD700016243C /* DPDetailViewSharedButtonCell.m */; };
+		031D35F018D205270016243C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 031D35EE18D205270016243C /* libMobClickLibrary.a */; };
+		031D35F218D2057B0016243C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 031D35F118D2057B0016243C /* libz.dylib */; };
 		0329C0DF18C38773003D9FC9 /* DPMainPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0329C0DE18C38773003D9FC9 /* DPMainPageCell.m */; };
 		0329C0E418C38A7B003D9FC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0329C0E018C3895B003D9FC9 /* libsqlite3.dylib */; };
 		035E961F18BB8D85009AF193 /* DPDreamMainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E961E18BB8D85009AF193 /* DPDreamMainListViewController.m */; };
@@ -66,6 +69,11 @@
 		03046F0E18BA41DF002F9183 /* DreamParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamParseTests.m; sourceTree = "<group>"; };
 		03046F1918BA435C002F9183 /* DP.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = DP.db; sourceTree = "<group>"; };
 		03046F1B18BA43A9002F9183 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		031D35EA18D1FD700016243C /* DPDetailViewSharedButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDetailViewSharedButtonCell.h; sourceTree = "<group>"; };
+		031D35EB18D1FD700016243C /* DPDetailViewSharedButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDetailViewSharedButtonCell.m; sourceTree = "<group>"; };
+		031D35EE18D205270016243C /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		031D35EF18D205270016243C /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		031D35F118D2057B0016243C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0329C0DD18C38773003D9FC9 /* DPMainPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPMainPageCell.h; sourceTree = "<group>"; };
 		0329C0DE18C38773003D9FC9 /* DPMainPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPMainPageCell.m; sourceTree = "<group>"; };
 		0329C0E018C3895B003D9FC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -100,10 +108,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031D35F218D2057B0016243C /* libz.dylib in Frameworks */,
 				0329C0E418C38A7B003D9FC9 /* libsqlite3.dylib in Frameworks */,
 				03046EEC18BA41DF002F9183 /* CoreGraphics.framework in Frameworks */,
 				03046EEE18BA41DF002F9183 /* UIKit.framework in Frameworks */,
 				03046EEA18BA41DF002F9183 /* Foundation.framework in Frameworks */,
+				031D35F018D205270016243C /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +152,7 @@
 		03046EE818BA41DF002F9183 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				031D35F118D2057B0016243C /* libz.dylib */,
 				0329C0E018C3895B003D9FC9 /* libsqlite3.dylib */,
 				03046EE918BA41DF002F9183 /* Foundation.framework */,
 				03046EEB18BA41DF002F9183 /* CoreGraphics.framework */,
@@ -208,6 +219,15 @@
 			path = resource;
 			sourceTree = "<group>";
 		};
+		031D35ED18D205270016243C /* UMAnalytics_Sdk_2.2.1.OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				031D35EE18D205270016243C /* libMobClickLibrary.a */,
+				031D35EF18D205270016243C /* MobClick.h */,
+			);
+			path = UMAnalytics_Sdk_2.2.1.OpenUDID;
+			sourceTree = "<group>";
+		};
 		0329C0DC18C38759003D9FC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +235,8 @@
 				0329C0DE18C38773003D9FC9 /* DPMainPageCell.m */,
 				03BD11C818C7751A0015B163 /* DPDreamBodyTextCell.h */,
 				03BD11C918C7751A0015B163 /* DPDreamBodyTextCell.m */,
+				031D35EA18D1FD700016243C /* DPDetailViewSharedButtonCell.h */,
+				031D35EB18D1FD700016243C /* DPDetailViewSharedButtonCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +288,7 @@
 		035E963218BB9AB9009AF193 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				031D35ED18D205270016243C /* UMAnalytics_Sdk_2.2.1.OpenUDID */,
 				035E963318BB9AB9009AF193 /* fmdb */,
 			);
 			path = Lib;
@@ -400,6 +423,7 @@
 				035E961F18BB8D85009AF193 /* DPDreamMainListViewController.m in Sources */,
 				035E962218BB8DFC009AF193 /* DPDreamSearchListViewController.m in Sources */,
 				03046EF618BA41DF002F9183 /* main.m in Sources */,
+				031D35EC18D1FD700016243C /* DPDetailViewSharedButtonCell.m in Sources */,
 				035E964418BB9AB9009AF193 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +546,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DreamParse/DreamParse-Prefix.pch";
 				INFOPLIST_FILE = "DreamParse/DreamParse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/liufeng/Documents/Build/DreamParse/DreamParse/Lib/UMAnalytics_Sdk_2.2.1.OpenUDID,
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -536,6 +564,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DreamParse/DreamParse-Prefix.pch";
 				INFOPLIST_FILE = "DreamParse/DreamParse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/liufeng/Documents/Build/DreamParse/DreamParse/Lib/UMAnalytics_Sdk_2.2.1.OpenUDID,
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

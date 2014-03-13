@@ -11,8 +11,12 @@
 #import "DPDreamService.h"
 #import "DPMainPageCell.h"
 #import "DPDreamEntity.h"
+#import "MobClick.h"
 
 #define DreamService [DPDreamService sharedInstance]
+#define IsSearchResultTableView (tableView == self.searchDisplayController.searchResultsTableView)
+
+#define MainListPage @"Main List Page"
 
 @interface DPDreamMainListViewController () <UISearchBarDelegate, UISearchDisplayDelegate>
 
@@ -38,6 +42,19 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [MobClick beginLogPageView:MainListPage];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [MobClick endLogPageView:MainListPage];
+}
 
 #pragma mark - Table view data source
 
@@ -59,7 +76,7 @@
     static NSString *MainPageListCellIdentifier = @"MainPageListCell";
     static NSString *MainPageResultListCellIdentifier = @"MainPageResultList";
     
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
+    if (IsSearchResultTableView) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MainPageResultListCellIdentifier
                                                                 forIndexPath:indexPath];
         DPDreamEntity *dreamEntity = self.searchResultList[indexPath.row];
@@ -71,6 +88,18 @@
                                                                forIndexPath:indexPath];
         [self configureCell:cell forIndexPath:indexPath];
         return cell;
+    }
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (IsSearchResultTableView) {
+        DPDreamEntity *dreamEntity = self.searchResultList[indexPath.row];
+        DPDreamDetailViewController *dreamDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DPDreamDetailViewController"];
+        dreamDetailViewController.dreamEntity = dreamEntity;
+        
+        [self.navigationController pushViewController:dreamDetailViewController animated:YES];
     }
 }
 
