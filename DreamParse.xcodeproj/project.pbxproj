@@ -17,10 +17,8 @@
 		03046F0318BA41DF002F9183 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03046F0218BA41DF002F9183 /* XCTest.framework */; };
 		03046F0418BA41DF002F9183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03046EE918BA41DF002F9183 /* Foundation.framework */; };
 		03046F0518BA41DF002F9183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03046EED18BA41DF002F9183 /* UIKit.framework */; };
-		03046F0D18BA41DF002F9183 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03046F0B18BA41DF002F9183 /* InfoPlist.strings */; };
 		03046F0F18BA41DF002F9183 /* DreamParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03046F0E18BA41DF002F9183 /* DreamParseTests.m */; };
 		03046F1A18BA435C002F9183 /* DP.db in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1918BA435C002F9183 /* DP.db */; };
-		03046F1C18BA43A9002F9183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03046F1B18BA43A9002F9183 /* Main.storyboard */; };
 		031D35EC18D1FD700016243C /* DPDetailViewSharedButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 031D35EB18D1FD700016243C /* DPDetailViewSharedButtonCell.m */; };
 		031D35F018D205270016243C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 031D35EE18D205270016243C /* libMobClickLibrary.a */; };
 		031D35F218D2057B0016243C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 031D35F118D2057B0016243C /* libz.dylib */; };
@@ -36,6 +34,7 @@
 		035E964518BB9AB9009AF193 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963B18BB9AB9009AF193 /* FMDatabasePool.m */; };
 		035E964618BB9AB9009AF193 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */; };
 		035E964818BB9AB9009AF193 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E964018BB9AB9009AF193 /* FMResultSet.m */; };
+		03BB366518DAC061004A065A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB366718DAC061004A065A /* Main.storyboard */; };
 		03BD11CA18C7751A0015B163 /* DPDreamBodyTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BD11C918C7751A0015B163 /* DPDreamBodyTextCell.m */; };
 		03BD11CD18C775600015B163 /* DPDreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BD11CC18C775600015B163 /* DPDreamDetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -64,11 +63,8 @@
 		03046EFB18BA41DF002F9183 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03046F0118BA41DF002F9183 /* DreamParseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamParseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03046F0218BA41DF002F9183 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		03046F0A18BA41DF002F9183 /* DreamParseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DreamParseTests-Info.plist"; sourceTree = "<group>"; };
-		03046F0C18BA41DF002F9183 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03046F0E18BA41DF002F9183 /* DreamParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamParseTests.m; sourceTree = "<group>"; };
 		03046F1918BA435C002F9183 /* DP.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = DP.db; sourceTree = "<group>"; };
-		03046F1B18BA43A9002F9183 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		031D35EA18D1FD700016243C /* DPDetailViewSharedButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDetailViewSharedButtonCell.h; sourceTree = "<group>"; };
 		031D35EB18D1FD700016243C /* DPDetailViewSharedButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDetailViewSharedButtonCell.m; sourceTree = "<group>"; };
 		031D35EE18D205270016243C /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
@@ -97,6 +93,8 @@
 		035E963D18BB9AB9009AF193 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		035E963F18BB9AB9009AF193 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		035E964018BB9AB9009AF193 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		03BB366818DAC18C004A065A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		03BB366918DAC18C004A065A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		03BD11C818C7751A0015B163 /* DPDreamBodyTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDreamBodyTextCell.h; sourceTree = "<group>"; };
 		03BD11C918C7751A0015B163 /* DPDreamBodyTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamBodyTextCell.m; sourceTree = "<group>"; };
 		03BD11CB18C775600015B163 /* DPDreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPDreamDetailViewController.h; path = DreamParse/Controller/DPDreamDetailViewController.h; sourceTree = SOURCE_ROOT; };
@@ -176,7 +174,7 @@
 				03046EF918BA41DF002F9183 /* DPAppDelegate.m */,
 				03046EFB18BA41DF002F9183 /* Images.xcassets */,
 				03046EF018BA41DF002F9183 /* Supporting Files */,
-				03046F1B18BA43A9002F9183 /* Main.storyboard */,
+				03BB366718DAC061004A065A /* Main.storyboard */,
 			);
 			path = DreamParse;
 			sourceTree = "<group>";
@@ -196,18 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				03046F0E18BA41DF002F9183 /* DreamParseTests.m */,
-				03046F0918BA41DF002F9183 /* Supporting Files */,
 			);
 			path = DreamParseTests;
-			sourceTree = "<group>";
-		};
-		03046F0918BA41DF002F9183 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				03046F0A18BA41DF002F9183 /* DreamParseTests-Info.plist */,
-				03046F0B18BA41DF002F9183 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		03046F1818BA435C002F9183 /* Resource */ = {
@@ -370,6 +358,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 03046EDD18BA41DE002F9183;
 			productRefGroup = 03046EE718BA41DF002F9183 /* Products */;
@@ -390,7 +379,7 @@
 				03046F1A18BA435C002F9183 /* DP.db in Resources */,
 				03046EF418BA41DF002F9183 /* InfoPlist.strings in Resources */,
 				03046EFC18BA41DF002F9183 /* Images.xcassets in Resources */,
-				03046F1C18BA43A9002F9183 /* Main.storyboard in Resources */,
+				03BB366518DAC061004A065A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +387,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03046F0D18BA41DF002F9183 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,16 +439,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				03046EF318BA41DF002F9183 /* en */,
+				03BB366818DAC18C004A065A /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		03046F0B18BA41DF002F9183 /* InfoPlist.strings */ = {
+		03BB366718DAC061004A065A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				03046F0C18BA41DF002F9183 /* en */,
+				03BB366918DAC18C004A065A /* zh-Hans */,
 			);
-			name = InfoPlist.strings;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
