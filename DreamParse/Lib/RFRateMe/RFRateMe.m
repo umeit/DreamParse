@@ -9,7 +9,7 @@
 #import "RFRateMe.h"
 #import "UIAlertView+NSCookbook.h"
 
-#define kNumberOfDaysUntilShowAgain 1
+#define kNumberOfDaysUntilShowAgain 3
 #define kAppStoreAddress @"https://itunes.apple.com/us/app/jobsy/id687059035"
 #define kAppName @"周公邀你去评价"
 
