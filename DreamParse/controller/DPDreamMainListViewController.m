@@ -56,6 +56,7 @@
     [MobClick endLogPageView:MainListPage];
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -124,18 +125,18 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     // 根据关键词搜索
-    NSString *keyWord = [searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    DPDreamEntity *dreamEntity = [DreamService searchDreamWithKeyWord:keyWord];
-    
-    if (dreamEntity) {
-        DPDreamDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DPDreamDtailViewController"];
-        detailViewController.dreamEntity = dreamEntity;
-        detailViewController.title = keyWord;
-        [self.navigationController pushViewController:detailViewController animated:YES];
-    }
-    else {
-        // 没有搜索结果
-    }
+//    NSString *keyWord = [searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+//    DPDreamEntity *dreamEntity = [DreamService searchDreamWithKeyWord:keyWord];
+//    
+//    if (dreamEntity) {
+//        DPDreamDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DPDreamDtailViewController"];
+//        detailViewController.dreamEntity = dreamEntity;
+//        detailViewController.title = keyWord;
+//        [self.navigationController pushViewController:detailViewController animated:YES];
+//    }
+//    else {
+//        // 没有搜索结果
+//    }
 }
 
 
