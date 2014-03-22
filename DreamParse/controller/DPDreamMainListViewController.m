@@ -12,6 +12,7 @@
 #import "DPMainPageCell.h"
 #import "DPDreamEntity.h"
 #import "MobClick.h"
+#import "UMFeedbackViewController.h"
 
 #define DreamService [DPDreamService sharedInstance]
 #define IsSearchResultTableView (tableView == self.searchDisplayController.searchResultsTableView)
@@ -54,6 +55,19 @@
     [super viewWillDisappear:animated];
     
     [MobClick endLogPageView:MainListPage];
+}
+
+
+#pragma mark - Action
+
+- (IBAction)feedbackButtonPress:(id)sender
+{
+    [self showNativeFeedbackWithAppkey];
+}
+
+- (IBAction)rateButtonPress:(id)sender
+{
+    NSLog(@"asdf");
 }
 
 
@@ -124,19 +138,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    // 根据关键词搜索
-//    NSString *keyWord = [searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-//    DPDreamEntity *dreamEntity = [DreamService searchDreamWithKeyWord:keyWord];
-//    
-//    if (dreamEntity) {
-//        DPDreamDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DPDreamDtailViewController"];
-//        detailViewController.dreamEntity = dreamEntity;
-//        detailViewController.title = keyWord;
-//        [self.navigationController pushViewController:detailViewController animated:YES];
-//    }
-//    else {
-//        // 没有搜索结果
-//    }
+    
 }
 
 
@@ -159,6 +161,14 @@
 
 
 #pragma mark - Private
+
+- (void)showNativeFeedbackWithAppkey
+{
+    UMFeedbackViewController *feedbackViewController = [[UMFeedbackViewController alloc] initWithNibName:@"UMFeedbackViewController" bundle:nil];
+    feedbackViewController.appkey = @"5321d22a56240b031d03dc4d";
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedbackViewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
 
 - (void)configureCell:(DPMainPageCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {

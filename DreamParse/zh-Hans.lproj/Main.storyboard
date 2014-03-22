@@ -62,9 +62,15 @@
                     <navigationItem key="navigationItem" title="天天解梦" id="pjw-Em-DKS">
                         <barButtonItem key="leftBarButtonItem" title="评价" id="75K-Oj-xQ3">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="rateButtonPress:" destination="5R6-nZ-wU3" id="b6O-tl-piW"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="反馈" id="mJi-tN-5KH">
+                        <barButtonItem key="rightBarButtonItem" title="意见" id="mJi-tN-5KH">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="feedbackButtonPress:" destination="5R6-nZ-wU3" id="z8B-4E-1OE"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
