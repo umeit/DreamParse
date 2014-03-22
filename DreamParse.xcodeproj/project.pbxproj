@@ -57,6 +57,8 @@
 		03BB366518DAC061004A065A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB366718DAC061004A065A /* Main.storyboard */; };
 		03BD11CA18C7751A0015B163 /* DPDreamBodyTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BD11C918C7751A0015B163 /* DPDreamBodyTextCell.m */; };
 		03BD11CD18C775600015B163 /* DPDreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BD11CC18C775600015B163 /* DPDreamDetailViewController.m */; };
+		03CEEC4118DD876500E65664 /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CEEC3E18DD876500E65664 /* libUMFeedback.a */; };
+		03CEEC4218DD876500E65664 /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03CEEC3F18DD876500E65664 /* umFeedback.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,9 @@
 		03BD11C918C7751A0015B163 /* DPDreamBodyTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDreamBodyTextCell.m; sourceTree = "<group>"; };
 		03BD11CB18C775600015B163 /* DPDreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPDreamDetailViewController.h; path = DreamParse/Controller/DPDreamDetailViewController.h; sourceTree = SOURCE_ROOT; };
 		03BD11CC18C775600015B163 /* DPDreamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPDreamDetailViewController.m; path = DreamParse/Controller/DPDreamDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		03CEEC3E18DD876500E65664 /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
+		03CEEC3F18DD876500E65664 /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
+		03CEEC4018DD876500E65664 /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +172,7 @@
 				03046EEA18BA41DF002F9183 /* Foundation.framework in Frameworks */,
 				031D35F018D205270016243C /* libMobClickLibrary.a in Frameworks */,
 				030F688118DC0D6B00C4C12D /* ShareSDKiPhoneDefaultShareViewUI.framework in Frameworks */,
+				03CEEC4118DD876500E65664 /* libUMFeedback.a in Frameworks */,
 				030F687B18DC0D6B00C4C12D /* ShareSDKCoreService.framework in Frameworks */,
 				030F687818DC0D6B00C4C12D /* AGCommon.framework in Frameworks */,
 				030F688318DC0D6B00C4C12D /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */,
@@ -401,6 +407,7 @@
 		035E963218BB9AB9009AF193 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				03CEEC3D18DD876500E65664 /* UMFeedback_iOS_1.41 */,
 				030F685F18DC0D6B00C4C12D /* ShareSDK */,
 				03B7098E18DAEF12006FFA6C /* RFRateMe */,
 				031D35ED18D205270016243C /* UMAnalytics_Sdk_2.2.1.OpenUDID */,
@@ -435,6 +442,16 @@
 				03B7099218DAEF12006FFA6C /* UIAlertView+NSCookbook.m */,
 			);
 			path = RFRateMe;
+			sourceTree = "<group>";
+		};
+		03CEEC3D18DD876500E65664 /* UMFeedback_iOS_1.41 */ = {
+			isa = PBXGroup;
+			children = (
+				03CEEC3E18DD876500E65664 /* libUMFeedback.a */,
+				03CEEC3F18DD876500E65664 /* umFeedback.bundle */,
+				03CEEC4018DD876500E65664 /* UMFeedback.h */,
+			);
+			path = UMFeedback_iOS_1.41;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,6 +531,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CEEC4218DD876500E65664 /* umFeedback.bundle in Resources */,
 				030F688218DC0D6B00C4C12D /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */,
 				030F688018DC0D6B00C4C12D /* ShareSDKiPhoneDefaultShareViewUI.bundle in Resources */,
 				03046F1A18BA435C002F9183 /* DP.db in Resources */,
@@ -707,6 +725,7 @@
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/YiXinSDK",
+					"$(PROJECT_DIR)/DreamParse/Lib/UMFeedback_iOS_1.41",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -740,6 +759,7 @@
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/YiXinSDK",
+					"$(PROJECT_DIR)/DreamParse/Lib/UMFeedback_iOS_1.41",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
