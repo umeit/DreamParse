@@ -37,6 +37,12 @@
     
     [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MainPageResultList"];
     
+    self.navigationItem.rightBarButtonItem.target = self;
+    self.navigationItem.rightBarButtonItem.action = @selector(feedbackButtonPress:);
+    
+    self.navigationItem.leftBarButtonItem.target = self;
+    self.navigationItem.leftBarButtonItem.action = @selector(rateButtonPress:);
+    
     [DreamService mainPageList:^(NSArray *list) {
         self.mainPageList = list;
         [self.tableView reloadData];
@@ -60,12 +66,12 @@
 
 #pragma mark - Action
 
-- (IBAction)feedbackButtonPress:(id)sender
+- (void)feedbackButtonPress:(id)sender
 {
     [self showNativeFeedbackWithAppkey];
 }
 
-- (IBAction)rateButtonPress:(id)sender
+- (void)rateButtonPress:(id)sender
 {
     NSLog(@"asdf");
 }
