@@ -9,19 +9,21 @@
 #import "DPAppDelegate.h"
 #import "MobClick.h"
 #import "RFRateMe.h"
-#import <ShareSDK/ShareSDK.h>
-#import "WXApi.h"
+#import "UMSocial.h"
 
 @implementation DPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [MobClick startWithAppkey:@"5321d22a56240b031d03dc4d" reportPolicy:SEND_ON_EXIT channelId:nil];
+    NSString *umAppKey = @"5321d22a56240b031d03dc4d";
+    
+    [MobClick startWithAppkey:umAppKey reportPolicy:SEND_ON_EXIT channelId:nil];
     
     [RFRateMe showRateAlertAfterTimesOpened:3];
     
-    [ShareSDK registerApp:@"167c5c2cac92"];
-    [ShareSDK connectWeChatFavWithAppId:@"1234" wechatCls:[WXApi class]];
+    [UMSocialData setAppKey:umAppKey];
+    [UMSocialData openLog:YES];
+    
     return YES;
 }
 
