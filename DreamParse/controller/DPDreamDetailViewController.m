@@ -11,6 +11,8 @@
 #import "DPDetailViewSharedButtonCell.h"
 #import "DPDreamBodyTextCell.h"
 #import "MobClick.h"
+#import "UMSocial.h"
+//#import <ShareSDK/ShareSDK.h>
 
 #define DetailView @"Detail View"
 
@@ -115,7 +117,15 @@
 
 - (IBAction)sharedButtonPress:(UIButton *)sender
 {
-    NSLog(@"string");
+    NSString *content = [self.dreamEntity.bodyText
+                         stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
+    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"5321d22a56240b031d03dc4d"
+                                      shareText:content
+                                     shareImage:[UIImage imageNamed:@"icon.png"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,nil]
+                                       delegate:nil];
 }
 
 
