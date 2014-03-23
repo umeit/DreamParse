@@ -34,19 +34,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.searchBar.backgroundImage = [UIImage imageNamed:@"MainTableViewBackgroundImage"];
     
-    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MainPageResultList"];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTableViewBackgroundImage"]];
     
-    self.navigationItem.rightBarButtonItem.target = self;
-    self.navigationItem.rightBarButtonItem.action = @selector(feedbackButtonPress:);
+    [self registerSearchResultCell];
     
-    self.navigationItem.leftBarButtonItem.target = self;
-    self.navigationItem.leftBarButtonItem.action = @selector(rateButtonPress:);
+    [self configureNavigationBarButton];
     
-    [DreamService mainPageList:^(NSArray *list) {
-        self.mainPageList = list;
-        [self.tableView reloadData];
-    }];
+    [self updateDate];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -113,6 +110,13 @@
 }
 
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.backgroundColor = [UIColor clearColor];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (IsSearchResultTableView) {
@@ -167,6 +171,28 @@
 
 
 #pragma mark - Private
+
+- (void)registerSearchResultCell
+{
+    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MainPageResultList"];
+}
+
+- (void)updateDate
+{
+    [DreamService mainPageList:^(NSArray *list) {
+        self.mainPageList = list;
+        [self.tableView reloadData];
+    }];
+}
+
+- (void)configureNavigationBarButton
+{
+    self.navigationItem.rightBarButtonItem.target = self;
+    self.navigationItem.rightBarButtonItem.action = @selector(feedbackButtonPress:);
+    
+    self.navigationItem.leftBarButtonItem.target = self;
+    self.navigationItem.leftBarButtonItem.action = @selector(rateButtonPress:);
+}
 
 - (void)showNativeFeedbackWithAppkey
 {
