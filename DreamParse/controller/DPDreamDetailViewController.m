@@ -12,11 +12,12 @@
 #import "DPDreamBodyTextCell.h"
 #import "MobClick.h"
 #import "UMSocial.h"
+
 //#import <ShareSDK/ShareSDK.h>
 
 #define DetailView @"Detail View"
 
-@interface DPDreamDetailViewController ()
+@interface DPDreamDetailViewController () <UMSocialUIDelegate>
 
 @end
 
@@ -123,9 +124,28 @@
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"5321d22a56240b031d03dc4d"
                                       shareText:content
-                                     shareImage:[UIImage imageNamed:@"icon.png"]
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,nil]
-                                       delegate:nil];
+                                     shareImage:[UIImage imageNamed:@"MainTableViewBackgroundImage"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,
+                                                                          UMShareToWechatSession,
+                                                                          UMShareToWechatTimeline,
+                                                                          nil]
+                                       delegate:self];
+}
+
+
+#pragma mark - UMSocialUIDelegate Delegate
+
+- (void)didSelectSocialPlatform:(NSString *)platformName withSocialData:(UMSocialData *)socialData
+{
+    NSString *content = [self.dreamEntity.bodyText
+                         stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
+    
+    if ([platformName isEqualToString:UMShareToWechatTimeline]) {
+        [UMSocialData defaultData].extConfig.title = content;
+    }
+    else {
+        [UMSocialData defaultData].extConfig.title = @"标题";
+    }
 }
 
 

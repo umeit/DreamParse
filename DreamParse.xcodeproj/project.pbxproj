@@ -48,6 +48,8 @@
 		0378756F18DEC7AD001783B0 /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0378756318DEC7AD001783B0 /* UMSnsAccountViewController.xib */; };
 		0378757018DEC7AD001783B0 /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0378756418DEC7AD001783B0 /* UMSShareListController.xib */; };
 		0378757118DEC7AD001783B0 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0378756518DEC7AD001783B0 /* UMSocialSDKResourcesNew.bundle */; };
+		0378ACF718E02DA600D45094 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0378ACF218E02DA600D45094 /* libSocialWechat.a */; };
+		0378ACF818E02DA600D45094 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0378ACF318E02DA600D45094 /* libWeChatSDK.a */; };
 		03B7099318DAEF12006FFA6C /* RFRateMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B7099018DAEF12006FFA6C /* RFRateMe.m */; };
 		03B7099418DAEF12006FFA6C /* UIAlertView+NSCookbook.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B7099218DAEF12006FFA6C /* UIAlertView+NSCookbook.m */; };
 		03BB366518DAC061004A065A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB366718DAC061004A065A /* Main.storyboard */; };
@@ -166,6 +168,11 @@
 		0378756418DEC7AD001783B0 /* UMSShareListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSShareListController.xib; sourceTree = "<group>"; };
 		0378756518DEC7AD001783B0 /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
 		0378756618DEC7AD001783B0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
+		0378ACF218E02DA600D45094 /* libSocialWechat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWechat.a; sourceTree = "<group>"; };
+		0378ACF318E02DA600D45094 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		0378ACF418E02DA600D45094 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		0378ACF518E02DA600D45094 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		0378ACF618E02DA600D45094 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		03B7098F18DAEF12006FFA6C /* RFRateMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFRateMe.h; sourceTree = "<group>"; };
 		03B7099018DAEF12006FFA6C /* RFRateMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFRateMe.m; sourceTree = "<group>"; };
 		03B7099118DAEF12006FFA6C /* UIAlertView+NSCookbook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+NSCookbook.h"; sourceTree = "<group>"; };
@@ -221,9 +228,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0378ACF818E02DA600D45094 /* libWeChatSDK.a in Frameworks */,
 				036209D018DC2A7A00EFE810 /* libicucore.dylib in Frameworks */,
 				036209CE18DC2A4300EFE810 /* CoreTelephony.framework in Frameworks */,
 				036209CC18DC2A3800EFE810 /* QuartzCore.framework in Frameworks */,
+				0378ACF718E02DA600D45094 /* libSocialWechat.a in Frameworks */,
 				036209CA18DC2A2600EFE810 /* SystemConfiguration.framework in Frameworks */,
 				031D35F218D2057B0016243C /* libz.dylib in Frameworks */,
 				0329C0E418C38A7B003D9FC9 /* libsqlite3.dylib in Frameworks */,
@@ -429,6 +438,7 @@
 		0378754C18DEC7AD001783B0 /* UMSocial_Sdk_3.3.6 */ = {
 			isa = PBXGroup;
 			children = (
+				0378ACF018E02DA600D45094 /* UMSocial_Sdk_Extra_Frameworks */,
 				0378754D18DEC7AD001783B0 /* UMSocialLocalizable.strings */,
 				0378754F18DEC7AD001783B0 /* Header */,
 				0378755B18DEC7AD001783B0 /* libUMSocial_Sdk_3.3.6.a */,
@@ -469,6 +479,26 @@
 				0378756418DEC7AD001783B0 /* UMSShareListController.xib */,
 			);
 			path = SocialSDKXib;
+			sourceTree = "<group>";
+		};
+		0378ACF018E02DA600D45094 /* UMSocial_Sdk_Extra_Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0378ACF118E02DA600D45094 /* Wechat */,
+			);
+			path = UMSocial_Sdk_Extra_Frameworks;
+			sourceTree = "<group>";
+		};
+		0378ACF118E02DA600D45094 /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				0378ACF218E02DA600D45094 /* libSocialWechat.a */,
+				0378ACF318E02DA600D45094 /* libWeChatSDK.a */,
+				0378ACF418E02DA600D45094 /* UMSocialWechatHandler.h */,
+				0378ACF518E02DA600D45094 /* WXApi.h */,
+				0378ACF618E02DA600D45094 /* WXApiObject.h */,
+			);
+			path = Wechat;
 			sourceTree = "<group>";
 		};
 		03B7098E18DAEF12006FFA6C /* RFRateMe */ = {
@@ -848,10 +878,7 @@
 		03046F1318BA41DF002F9183 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					"armv7,armv7s",
-				);
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Liu (3Q8WFFPVWF)";
@@ -879,11 +906,13 @@
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/YiXinSDK",
 					"$(PROJECT_DIR)/DreamParse/Lib/UMFeedback_iOS_1.41",
 					"$(PROJECT_DIR)/DreamParse/Lib/UMSocial_Sdk_3.3.6",
+					"$(PROJECT_DIR)/DreamParse/Lib/UMSocial_Sdk_3.3.6/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9A80B907-C6DB-4333-AEFA-CACDDF7010A0";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -891,10 +920,7 @@
 		03046F1418BA41DF002F9183 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					"armv7,armv7s",
-				);
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Liu (3Q8WFFPVWF)";
@@ -922,11 +948,13 @@
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Extend/YiXinSDK",
 					"$(PROJECT_DIR)/DreamParse/Lib/UMFeedback_iOS_1.41",
 					"$(PROJECT_DIR)/DreamParse/Lib/UMSocial_Sdk_3.3.6",
+					"$(PROJECT_DIR)/DreamParse/Lib/UMSocial_Sdk_3.3.6/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9A80B907-C6DB-4333-AEFA-CACDDF7010A0";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
