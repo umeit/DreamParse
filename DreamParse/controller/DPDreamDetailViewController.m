@@ -141,6 +141,8 @@
                          stringByReplacingOccurrencesOfString:@"<br/>" withString:@""];
     
     if ([platformName isEqualToString:UMShareToWechatTimeline]) {
+//        socialData.title = content;
+        socialData.shareText = @"";
         [UMSocialData defaultData].extConfig.title = content;
     }
     else {
