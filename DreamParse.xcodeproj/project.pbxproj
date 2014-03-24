@@ -606,6 +606,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Liu Feng";
 				TargetAttributes = {
+					03046EE518BA41DE002F9183 = {
+						DevelopmentTeam = 722Y85EX47;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
+					};
 					03046F0018BA41DF002F9183 = {
 						TestTargetID = 03046EE518BA41DE002F9183;
 					};
@@ -846,6 +854,8 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Liu (3Q8WFFPVWF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Feng Liu (3Q8WFFPVWF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Connection",
@@ -872,7 +882,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92CCB40A-65EB-49A1-887D-0D7EDCC0AE26";
+				PROVISIONING_PROFILE = "9A80B907-C6DB-4333-AEFA-CACDDF7010A0";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -887,6 +897,8 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Liu (3Q8WFFPVWF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Feng Liu (3Q8WFFPVWF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DreamParse/Lib/ShareSDK/Connection",
@@ -913,7 +925,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92CCB40A-65EB-49A1-887D-0D7EDCC0AE26";
+				PROVISIONING_PROFILE = "9A80B907-C6DB-4333-AEFA-CACDDF7010A0";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
