@@ -897,6 +897,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DreamParse/DreamParse-Prefix.pch";
 				INFOPLIST_FILE = "DreamParse/DreamParse-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/liufeng/Documents/Build/DreamParse/DreamParse/Lib/UMAnalytics_Sdk_2.2.1.OpenUDID,
@@ -939,6 +940,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DreamParse/DreamParse-Prefix.pch";
 				INFOPLIST_FILE = "DreamParse/DreamParse-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/liufeng/Documents/Build/DreamParse/DreamParse/Lib/UMAnalytics_Sdk_2.2.1.OpenUDID,
